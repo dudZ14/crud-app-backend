@@ -8,5 +8,5 @@
 - nodemon index.js
   
 ## How to test?
-- Use Postman, for example, to perform the operations PUT, POST, DELETE, GET
+- Use Postman, for example, to perform the operations PUT, POST, DELETE and GET
 - See the results in Postman and the persisted data (in MongoDB Atlas, for instance).
