@@ -1,8 +1,8 @@
 //modules
 const express = require("express");
 const mongoose = require("mongoose");
-const Product = require("./models/product.model");
 const productRoute = require("./routes/product.route");
+require('dotenv').config();
 
 const app = express();
 
@@ -18,9 +18,10 @@ app.get("/", (req, res) => {
   res.send("Hello from Node API Server");
 });
 
+const mongoURI = process.env.MONGO_URI;
 mongoose
   .connect(
-    "mongodb+srv://dudidaxilacabu:Aj3bvhds6SFjss@cluster0.wvrr4.mongodb.net/Node-API?retryWrites=true&w=majority&appName=Cluster0"
+    mongoURI
   )
   .then(() => {
     console.log("Connected to the database!");
